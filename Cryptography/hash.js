@@ -4,11 +4,11 @@ Very expensive to find original input
 Small probability of collision
 */
 
-const { createHash } = require('crypto');
+const crypto = require('crypto');
 
 // Create a string hash
 function hash(str){
-    return createHash('sha256').update(str).digest('hex');
+    return crypto.createHash('sha256').update(str).digest('hex');
 }
 
 // Compare 2 hashed passwords
